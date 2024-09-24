@@ -64,3 +64,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+.top {
+  height: 800px;
+  width: 1500px;
+  background-color: black;
+}
+
+/* .button1 {
+  display: block;
+  margin-top: 500px;
+  margin-left: 300px;
+}
+
+.nav1 {
+  display: inline-block;
+  margin-left: 600px;
+} */
