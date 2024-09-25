@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { getServerAuthSession } from "note/server/auth";
-  const session = await getServerAuthSession();
 
 
 export default async function TaskMaster(){
