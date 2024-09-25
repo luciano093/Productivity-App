@@ -1,12 +1,23 @@
 import React from 'react';
+import Link from 'next/link';
+import { getServerAuthSession } from "note/server/auth";
+  const session = await getServerAuthSession();
 
-export default function TaskMaster(){
+
+export default async function TaskMaster(){
+  const session = await getServerAuthSession();
+
     return (
         <div className="bg-black text-white min-h-screen flex flex-col items-center">
             {/* Navbar */}
             <nav className='w-full bg-gray-900 flex justify-between items-center px-8 py-4'>
                 <div className="text-xl font-bold text-indigo-300">TaskMaster</div>
-                <button className='bg-blue-700 hover:bg-blue-950 text-white font-bold px-4 py-2 rounded'>Sign In</button>
+                <Link
+                href={session ? "/api/auth/signout" : "/api/auth/signin"}
+                className="bg-blue-700 hover:bg-blue-950 text-white font-bold px-4 py-2 rounded"
+                >
+                {session ? "Sign out" : "Sign in"}
+              </Link>
             </nav>
 
             {/* Hero Section */}
@@ -15,7 +26,7 @@ export default function TaskMaster(){
             <h1 className="text-4xl lg:text-6xl font-extrabold text-white">Get Started
                 <span className="font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent"> Today</span> with <span className="font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">TaskMaster!</span>
             </h1>
-            <p className='text-gray-400 text-lg'>Give TaskMaster a try by typing in some of your days tasks</p>
+            <p className='text-gray-400 text-lg'>Give TaskMaster a Try by Typing in Some of Your Daily tasks</p>
             <div className="space-x-4">
                 <button className="bg-blue-700 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded">Get Started</button>
                 <button className='bg-blue-700 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded'>How it works</button>
