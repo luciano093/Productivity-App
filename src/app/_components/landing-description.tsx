@@ -7,7 +7,7 @@ export default function LandingDescription({ children: subheadings, title, descr
         <div className="flex flex-col items-center p-6 [&_*]:py-2 m-auto z-10">
           <span className="font-semibold text-3xl">{title}</span>
           <span className="font-light text-gray-200">{description}</span>
-          <div className="flex flex-col md:flex-row min-h-52 grid-flow-col md:grid-flex-row">
+          <div className="grid min-h-52 grid-flow-row md:grid-flex-row grid-cols-1 md:grid-cols-2 grid-rows-none">
             {subheadings}
           </div>
         </div>
