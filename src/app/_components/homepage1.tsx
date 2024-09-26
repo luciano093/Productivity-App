@@ -1,24 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
-import { getServerAuthSession } from "note/server/auth";
+// import Link from 'next/link';
 
 
 export default async function TaskMaster(){
-  const session = await getServerAuthSession();
-
     return (
-        <div className="bg-black text-white min-h-screen flex flex-col items-center">
-            {/* Navbar */}
-            <nav className='w-full bg-gray-900 flex justify-between items-center px-8 py-4'>
-                <div className="text-xl font-bold text-indigo-300">TaskMaster</div>
-                <Link
-                href={session ? "/api/auth/signout" : "/api/auth/signin"}
-                className="bg-blue-700 hover:bg-blue-950 text-white font-bold px-4 py-2 rounded"
-                >
-                {session ? "Sign out" : "Sign in"}
-              </Link>
-            </nav>
-
+        <div className="bg-black text-white min-h-screen flex flex-col items-center">            
             {/* Hero Section */}
             <div className="flex flex-col lg:flex-row items-center justify-between w-full lg:w-3/4 mx-auto mt-16 px-8 lg:px-0">
             <div className="lg:w-1/2 space-y-6">

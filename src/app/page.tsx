@@ -2,12 +2,14 @@ import "./styles/landing.css"
 
 import { api } from "note/trpc/server";
 import TaskMaster from "./_components/homepage1";
+import Navbar from "./_components/navbar";
 
 export default async function Home() {
   void api.post.getLatest.prefetch();
 
   return (
     <>
+      <Navbar />
       <TaskMaster />
       <div className="relative flex flex-row w-full bg-[#112069] min-h-96 text-white mb-[18%] md:mb-[6%]">
         <div className="absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-r from-[#2a3ea1] to-[#112069] z-0"></div>
