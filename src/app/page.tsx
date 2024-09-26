@@ -1,19 +1,15 @@
-import Link from "next/link";
 import { getServerAuthSession } from "note/server/auth";
 import { api } from "note/trpc/server";
-import Started from "./_components/started";
-import Navbar from "./_components/navbar";
 import TaskMaster from "./_components/homepage1";
 
 export default async function Home() {
-  const session = await getServerAuthSession();
   void api.post.getLatest.prefetch();
 
   return (
     <>
         <TaskMaster />
     <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
-        <div className="relative flex flex-row w-full bg-[#112069]">
+        <div className="relative flex flex-row w-full bg-[#112069] min-h-96">
         <div className="absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-r from-[#2a3ea1] to-[#112069] z-0"></div>
           <div className="flex flex-col items-center p-6 [&_*]:py-2 m-auto z-10">
             <span className="font-semibold text-3xl">This is the title</span>
