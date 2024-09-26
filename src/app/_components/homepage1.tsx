@@ -1,10 +1,11 @@
 import React from 'react';
 // import Link from 'next/link';
+import Button from './button';
 
 
 export default async function TaskMaster(){
     return (
-        <div className="bg-black text-white min-h-screen flex flex-col items-center">            
+        <div className="bg-black text-white min-h-screen flex flex-col items-center pt-20">            
             {/* Hero Section */}
             <div className="flex flex-col lg:flex-row items-center justify-between w-full lg:w-3/4 mx-auto mt-16 px-8 lg:px-0">
             <div className="lg:w-1/2 space-y-6">
@@ -13,8 +14,8 @@ export default async function TaskMaster(){
             </h1>
             <p className='text-gray-400 text-lg'>Give TaskMaster a Try by Typing in Some of Your Daily tasks</p>
             <div className="space-x-4">
-                <button className="bg-blue-700 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded">Get Started</button>
-                <button className='bg-blue-700 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded'>How it works</button>
+                <Button message='Get Started' />
+                <Button message='How it works' />
             </div>
             </div>
             <div className="lg:w-1/2 mt-10 lg:mt-0">
