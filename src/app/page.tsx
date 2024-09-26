@@ -1,4 +1,5 @@
-import { getServerAuthSession } from "note/server/auth";
+import "./styles/landing.css"
+
 import { api } from "note/trpc/server";
 import TaskMaster from "./_components/homepage1";
 
