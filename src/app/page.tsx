@@ -5,6 +5,7 @@ import TaskMaster from "./_components/homepage1";
 import Navbar from "./_components/navbar";
 import LandingDescription from "./_components/landing-description";
 import LandingDescriptionSubheading from "./_components/landing-description-subheading";
+import TestMessage from "./_components/test-component";
 
 export default async function Home() {
   void api.post.getLatest.prefetch();
@@ -19,6 +20,7 @@ export default async function Home() {
         <LandingDescriptionSubheading title="Customizable Prioritization" description="Not all tasks are created equal. With TaskMaster, you can set priority levels for each task, ensuring the most important jobs are tackled first. Use the color-coded priority system to easily visualize your day at a glance." />
         <LandingDescriptionSubheading title="Goal Setting & Milestones" description="Go beyond daily tasks by setting long-term goals and tracking milestones. Whether it’s personal development, fitness, or a big project, TaskMaster helps you outline actionable steps and measures your progress, so you stay motivated and on target.F" />
       </LandingDescription>
+      <TestMessage/>
     </>
   );
 }
